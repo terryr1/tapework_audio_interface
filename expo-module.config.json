@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["TapeworkAudioInterfaceModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.tapeworkaudiointerface.TapeworkAudioInterfaceModule"]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "tapework-audio-interface": ["../src/index"],
+      "tapework-audio-interface/*": ["../src/*"]
+    }
+  }
+}
