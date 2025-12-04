@@ -4,7 +4,7 @@ import { TapeworkAudioInterfaceModuleEvents } from './TapeworkAudioInterface.typ
 
 declare class TapeworkAudioInterfaceModule extends NativeModule<TapeworkAudioInterfaceModuleEvents> {
   PI: number;
-  hello(): string;
+  playAudioInSync(audioUris: string[]): string;
   setValueAsync(value: string): Promise<void>;
 }
 
