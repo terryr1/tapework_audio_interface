@@ -1,7 +1,7 @@
 import ExpoModulesCore
 import AVFoundation
 
-public class TapeworkAudioInterfaceModule: BaseModule {
+public class TapeworkAudioInterfaceModule: Module {
   private let engine = AVAudioEngine()
   private var players: [AVAudioPlayerNode] = []
 
