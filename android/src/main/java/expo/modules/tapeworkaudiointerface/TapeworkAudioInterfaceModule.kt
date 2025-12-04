@@ -23,7 +23,7 @@ class TapeworkAudioInterfaceModule : Module() {
     Events("onChange")
 
     // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
-    Function("hello") {
+    Function("playAudioInSync") { (audioUris: [String]) in
       "Hello world! 👋"
     }
 
@@ -34,17 +34,6 @@ class TapeworkAudioInterfaceModule : Module() {
       sendEvent("onChange", mapOf(
         "value" to value
       ))
-    }
-
-    // Enables the module to be used as a native view. Definition components that are accepted as part of
-    // the view definition: Prop, Events.
-    View(TapeworkAudioInterfaceView::class) {
-      // Defines a setter for the `url` prop.
-      Prop("url") { view: TapeworkAudioInterfaceView, url: URL ->
-        view.webView.loadUrl(url.toString())
-      }
-      // Defines an event that the view can send to JavaScript.
-      Events("onLoad")
     }
   }
 }
